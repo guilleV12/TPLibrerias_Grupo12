@@ -16,8 +16,9 @@
 
     ?>
      <div class="row">
+     <div class="col-2">
+     </div>
         <div class="col-4">
-        </div>
         <div class="card m-4" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Faker</h5>
@@ -26,10 +27,8 @@
                 <a href="Vista/Persona/index.php" class="card-link">Ir a aplicacion de faker</a>
             </div>
         </div>
-     </div>
-    <div class="row">
-        <div class="col-4">
         </div>
+        <div class="col-4">
         <div class="card m-4" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Geographer</h5>
@@ -37,6 +36,31 @@
                 <p class="card-text">Libreria para obtener datos de paises.</p>
                 <a href="Vista/Pais/index.php" class="card-link">Ir a aplicacion de Geographer</a>
             </div>
+        </div>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-4">
+        <div class="card m-4" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Informacion faker</h5>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">Informacion sobre informacion y funciones ofrecidas por faker.</p>
+                <a href="Vista/Persona/index.php" class="card-link">Ir a info de faker</a>
+            </div>
+        </div>
+        </div>
+        <div class="col-4">
+        <div class="card m-4" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Informacion Geographer</h5>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">Informacion sobre informacion y funciones ofrecidas por geographer.</p>
+                <a href="Vista/GphrInfo/index.php" class="card-link">Ir a info de Geographer</a>
+            </div>
+        </div>
         </div>
      </div>
      <?php

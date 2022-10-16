@@ -23,6 +23,7 @@ spl_autoload_register(function ($class_name){ //Se ejecuta automáticamente cada
     $directorys = array( //Guarda las carpetas con clases (su creación) que usaremos
         $GLOBALS['ROOT'].'Modelo/',
         $GLOBALS['ROOT'].'Control/',
+        $GLOBALS['ROOT'].'Control/Conector',
         $GLOBALS['ROOT'].'Vista/',
         $GLOBALS['ROOT'].'Utiles/',
     );

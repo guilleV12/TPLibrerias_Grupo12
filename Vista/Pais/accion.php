@@ -14,6 +14,7 @@
     use MenaraSolutions\Geographer\Services\TranslationAgency;
     $datos = data_submitted();
     $objPais = new AbmPais();
+    $objPersona = new AbmPersona();
     $earth = new Earth;
     $paises = $earth->getCountries();
     
@@ -83,28 +84,49 @@
                     </div>';
 
     }elseif(isset($datos['NombreEliminar'])){
-        $objPais = new AbmPais();
-        $paisSelec[0] = ["Nombre"=>$datos['NombreEliminar']];
-        $pais = $objPais->buscar($paisSelec[0]);
-        $paisEliminar= ['Nombre'=>$pais[0]->getNombre(),
-                'Poblacion'=>$pais[0]->getPoblacion(),
-                'Area'=>$pais[0]->getArea(),
-                'Lenguaje'=>$pais[0]->getLenguaje()];
-        if ($objPais->baja($paisEliminar)){
-        echo '<div class="card" style="width: 18rem;background-color:#b1f8a3;margin-left:40%;margin-top:2%">
+        $listaPersona = $objPersona->buscar(null);
+        if (count($listaPersona)>0){
+            $resp = true;
+            foreach ($listaPersona as $persona){
+                if ($persona->getNombrePais()->getNombre() == $datos['NombreEliminar']){
+                    $resp = false;
+                }
+            }
+        }
+        if ($resp == true) {
+        
+            $objPais = new AbmPais();
+            $paisSelec[0] = ["Nombre"=>$datos['NombreEliminar']];
+            $pais = $objPais->buscar($paisSelec[0]);
+            $paisEliminar= ['Nombre'=>$pais[0]->getNombre(),
+                    'Poblacion'=>$pais[0]->getPoblacion(),
+                    'Area'=>$pais[0]->getArea(),
+                    'Lenguaje'=>$pais[0]->getLenguaje()];
+            if ($objPais->baja($paisEliminar)){
+            echo '<div class="card" style="width: 18rem;background-color:#b1f8a3;margin-left:40%;margin-top:2%">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center">Muy bien!</h5>
+                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                        <p class="card-text">Se ha eliminado el pais de la base de datos.</p>
+                        <a href="index.php" class="card-link" >Ir a la lista de paises</a>
+                    </div>
+                    </div>';
+            }else{
+                echo '<div class="card" style="width: 18rem;background-color:#f8a4a3;margin-left:40%;margin-top:2%">
                 <div class="card-body">
-                    <h5 class="card-title" style="text-align: center">Muy bien!</h5>
+                    <h5 class="card-title" style="text-align: center">Error!</h5>
                     <h6 class="card-subtitle mb-2 text-muted"></h6>
-                    <p class="card-text">Se ha eliminado el pais de la base de datos.</p>
+                    <p class="card-text">No se ha podido eliminar al pais de la base de datos.</p>
                     <a href="index.php" class="card-link" >Ir a la lista de paises</a>
                 </div>
                 </div>';
+            }
         }else{
             echo '<div class="card" style="width: 18rem;background-color:#f8a4a3;margin-left:40%;margin-top:2%">
             <div class="card-body">
                 <h5 class="card-title" style="text-align: center">Error!</h5>
                 <h6 class="card-subtitle mb-2 text-muted"></h6>
-                <p class="card-text">No se ha podido eliminar al pais de la base de datos.</p>
+                <p class="card-text">No se ha podido eliminar al pais de la base de datos porque esta en uso.</p>
                 <a href="index.php" class="card-link" >Ir a la lista de paises</a>
             </div>
             </div>';

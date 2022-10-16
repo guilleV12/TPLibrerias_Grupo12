@@ -11,7 +11,7 @@ $PROYECTO ='PrgWebDin/TPL/'; //Pone la ubicación de todo el proyecto desde htdo
 $ROOT =$_SERVER['DOCUMENT_ROOT']."/$PROYECTO/"; //Agarra la ubicación del servidor donde tiene guardada la carpeta
 
 include_once($ROOT.'Utiles/funciones.php'); //Trae las funciones del script funciones.php
-
+include_once($ROOT.'Utiles/vendor/autoload.php');
 
 /* 
 // Variable que define la pagina de autenticacion del proyecto
