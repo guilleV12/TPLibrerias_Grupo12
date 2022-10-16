@@ -49,10 +49,11 @@
                     Nombre: 
                     <input type="text" style="width:40%" class="form-control" id="nombreEditar" name="nombreEditar" value="<?php echo $pais[0]->getNombre() ?>" readonly required>
                     Poblacion:
-                    <input type="text" pattern="[a-zA-Z]{1,20}" style="width:40%;margin-top:1%" class="form-control" id="Poblacion" name="Poblacion" value="<?php echo $pais[0]->getPoblacion() ?>" required>
-                    Capital:
-                    <input type="text" pattern="[a-zA-Z]{1.20}" style="width:40%;margin-top:1%" class="form-control" id="Capital" name="Capital" value="<?php echo $pais[0]->getCapital() ?>" required>
-                    
+                    <input type="text" pattern="[0-9]+" min="0" style="width:40%;margin-top:1%" class="form-control" id="Poblacion" name="Poblacion" value="<?php echo $pais[0]->getPoblacion() ?>" required>
+                    Area:
+                    <input type="text" pattern="[0-9]+" min="0" style="width:40%;margin-top:1%" class="form-control" id="Area" name="Area" value="<?php echo $pais[0]->getArea() ?>" required>
+                    Lenguaje:
+                    <input type="text" pattern="[a-zA-Z]{1,20}" style="width:40%;margin-top:1%" class="form-control" id="Lenguaje" name="Lenguaje" value="<?php echo $pais[0]->getLenguaje() ?>" required>
 
                 </div>
                 <input type="submit" class="btn btn-success" value="Modificar" id="enviar">
@@ -74,7 +75,8 @@
                             <p class="card-title">Nombre:</p>
                             <input type="text" style="width:40%" class="form-control" id="NombreEliminar" name="NombreEliminar" value="<?php echo $pais[0]->getNombre() ?>" readonly required>
                             <p class="card-title">Poblacion: <?php echo $pais[0]->getPoblacion(); ?>.</p>
-                            <p class="card-title">Capital: <?php echo $pais[0]->getCapital(); ?>.</p>
+                            <p class="card-title">Area: <?php echo $pais[0]->getArea(); ?>.</p>
+                            <p class="card-title">Lenguaje: <?php echo $pais[0]->getLenguaje(); ?>.</p>
                         </div>
                         </div>
                 </div>
