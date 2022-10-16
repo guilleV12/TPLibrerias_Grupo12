@@ -1,0 +1,12 @@
+.container-sidebar{
+    width:10%;
+    height: 100%;
+}
+
+
+
+#cajas-ejs{
+    background-color:azure;
+    border: 1px solid black;
+    height: 20%;
+}

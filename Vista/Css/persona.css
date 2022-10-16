@@ -1,0 +1,39 @@
+#title{
+    text-align: center;
+}
+
+table{
+    margin-bottom:5%;
+}
+
+#nuevo{
+    float: right;
+    margin-right: 1%;
+}
+
+#tabla{
+    margin-top:4%;
+}
+
+#label{
+    font-size: 25px;
+}
+
+#radioNG{
+    margin-left: 35%;
+    margin-top:1%;
+}
+
+#nuevoRadioNo{
+    margin-left: 1%;
+}
+
+#botones{
+    margin-left:1%;
+}
+
+#enviar{
+    margin-left:35%;
+    margin-top:2%;
+    width:26%;
+}
