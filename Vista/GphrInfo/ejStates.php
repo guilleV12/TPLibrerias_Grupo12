@@ -18,8 +18,7 @@
         <form class="needs-validation" method="post" action="ejCitys.php" style="margin-top:2%" novalidate>
 
                 <div id="radioNG">
-                <label class="form-check-label" id="label" for="pais" style="padding-left:10%">Codigo seleccionado:</label><br>
-                        <input class="form-control" id="pais" name="pais" value="<?php echo $datos['pais'] ?>"style="width:40%" readonly required>
+                        <input type="hidden" class="form-control" id="pais" name="pais" value="<?php echo $datos['pais'] ?>"style="width:40%" readonly required>
 
                         <label class="form-check-label" id="label" for="provincias" style="padding-left:10%">Seleccione un pais:</label><br>
                         <select class="form-control" id="provincias" name="provincias" style="width:40%" required>

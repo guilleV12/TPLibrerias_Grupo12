@@ -47,8 +47,8 @@
             <div class="card-body">
                 <h5 class="card-title">Informacion faker</h5>
                 <h6 class="card-subtitle mb-2 text-muted"></h6>
-                <p class="card-text">Informacion sobre informacion y funciones ofrecidas por faker.</p>
-                <a href="Vista/Persona/index.php" class="card-link">Ir a info de faker</a>
+                <p class="card-text">Informacion sobre funciones ofrecidas por faker.</p>
+                <a href="Vista/FkrInfo/index.php" class="card-link">Ir a info de faker</a>
             </div>
         </div>
         </div>
@@ -57,7 +57,7 @@
             <div class="card-body">
                 <h5 class="card-title">Informacion Geographer</h5>
                 <h6 class="card-subtitle mb-2 text-muted"></h6>
-                <p class="card-text">Informacion sobre informacion y funciones ofrecidas por geographer.</p>
+                <p class="card-text">Informacion sobre funciones ofrecidas por geographer.</p>
                 <a href="Vista/GphrInfo/index.php" class="card-link">Ir a info de Geographer</a>
             </div>
         </div>
