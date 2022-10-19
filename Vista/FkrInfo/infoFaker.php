@@ -29,6 +29,17 @@ include_once "../Estructura/header.php";
             </thead>
         </table>
 
+
+        <p class="fs-5">O sino como alternativa puede ingresar en  la terminal siguiente línea:</p>
+    
+
+        <table class="table table-secondary table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col" class="font-monospace"> composer require fakerphp/faker</th>
+            </thead>
+        </table>
+
         <!-- <p class="font-monospace"> composer require fakerphp/faker </p>
  -->
 

@@ -10,8 +10,8 @@ include_once "../Estructura/header.php";
         <p class="fs-3">Informaci&oacute;n</p>
         <p class="fs-5">
             Geographer es una librer&iacute;a contiene informaci&oacute;n sobre los
-            pa&iacute;ses del mundo, como nombre localizaci&oacute;n, idioma,
-            estados/provincias y cuidades facilitando el uso de men&uacute;s
+            pa&iacute;ses del mundo, como nombre, localizaci&oacute;n, idioma,
+            estados/provincias y ciudades facilitando el uso de men&uacute;s
             desplegables con una lista de pa&iacute;ses o si la aplicaci&oacute;n
             tiene un feed con marcadores de ubicaciones.
         </p>
@@ -19,7 +19,7 @@ include_once "../Estructura/header.php";
     <div class="mb-3">
         <p class="fs-3">Instalaci&oacute;n</p>
         <p class="fs-5">
-            Para La instalaci&oacute;n de Geographer requiere PHP >= 5.5, ademas tener
+            Para la instalaci&oacute;n de Geographer requiere PHP >= 5.5, adem&aacute;s tener
             previamente instalado
             <a href="https://getcomposer.org/" class="text-decoration-none">Composer</a>.
             <br />
