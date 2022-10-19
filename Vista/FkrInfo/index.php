@@ -47,6 +47,18 @@
             </div>
         </div>
         </div>
+
+        <div class="col-4">
+            <div class="card m-4" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Informacion</h5>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">Informacion libreria.</p>
+                <a href="infoFaker.php"  class="card-link">Info</a>
+            </div>
+        </div>
+
+
      </div>
      
      <div class="row">
