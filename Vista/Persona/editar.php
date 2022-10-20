@@ -30,7 +30,7 @@
                             <div class="invalid-feedback">
                                 Debe elegir una opcion!
                             </div><br><br>
-                    <label class="form-check-label" id="label" for="pais">Desea ingresar una nueva persona?</label><br>
+                    <label class="form-check-label" id="label" for="pais">Seleccione pais:</label><br>
                         <select style="width:40%" class="form-control" id="pais" name="pais" value="si" required>
                             <option value="">Seleccione una opcion</option>
                                 <?php foreach ($listaPaises as $pais){  ?>
@@ -60,7 +60,8 @@
                 $objPersona = new AbmPersona();
                 $dni[0] = ["Dni"=>$datos['dniEditar']];
                 $persona = $objPersona->buscar($dni[0]);
-
+                $paises = new AbmPais();
+                $listaPaises = $paises->buscar(null);
 
         ?>
                 <div id="radioNG">
@@ -79,6 +80,13 @@
                         <option value="Casado">Casado</option>
                         <option value="Soltero">Soltero</option>
                         <option value="Divorciado">Divorciado</option>
+                    </select>
+                    Nombre Pais:
+                    <select class="form-select" style="width:40%;margin-top:1%" id="NombrePais" name="NombrePais" required>
+                        <option value="">Seleccione una opcion</option>
+                        <?php foreach ($listaPaises as $pais){  ?>
+                                    <option value='<?php echo $pais->getNombre() ?>' ><?php echo $pais->getNombre(); ?></option>
+                                <?php } ?>
                     </select>
 
                 </div>

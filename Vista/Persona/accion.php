@@ -37,7 +37,8 @@
                                     Dni: <?php echo $persona['Dni'] ?><br>
                                     Direccion: <?php echo $persona['Direccion'] ?><br>
                                     Telefono: <?php echo $persona['Telefono'] ?><br>
-                                    Estado civil: <?php echo $persona['Estado_civil'] ?><br></p>
+                                    Estado civil: <?php echo $persona['Estado_civil'] ?><br>
+                                    Pais: <?php echo $persona['NombrePais'] ?><br></p>
                 <a href="index.php" class="card-link" >Ir a la lista de personas</a>
             </div>
             </div>
@@ -68,7 +69,8 @@
                 'Apellido'=>$datos['Apellido'],
                 'Direccion'=>$datos['Direccion'],
                 'Telefono'=>$faker->phoneNumber(),
-                'Estado_civil'=>$datos['Estado_civil']];
+                'Estado_civil'=>$datos['Estado_civil'],
+                'NombrePais'=>$datos['NombrePais']];
                 $objPersona->modificacion($personaEditada);
             echo '<div class="card" style="width: 18rem;background-color:#b1f8a3;margin-left:40%;margin-top:2%">
                     <div class="card-body">
@@ -88,7 +90,8 @@
                 'Apellido'=>$persona[0]->getApellido(),
                 'Direccion'=>$persona[0]->getDireccion(),
                 'Telefono'=>$persona[0]->getTelefono(),
-                'Estado_civil'=>$persona[0]->getEstadoCivil()];
+                'Estado_civil'=>$persona[0]->getEstadoCivil(),
+                'NombrePais'=>$persona[0]->getNombrePais()];
         if ($objPersona->baja($personaEliminar)){
         echo '<div class="card" style="width: 18rem;background-color:#b1f8a3;margin-left:40%;margin-top:2%">
                 <div class="card-body">

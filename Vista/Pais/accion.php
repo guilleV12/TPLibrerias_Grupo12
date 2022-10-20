@@ -30,7 +30,6 @@
                         'Poblacion'=>$paisSelec->getPopulation(),
                         'Area'=>$paisSelec->getArea(),
                         'Lenguaje'=>$paisSelec->getLanguage()];
-                        echo 'aa'.print_r($pais);
             $listaPaises = $objPais->buscar($pais);
             if (count($listaPaises)==0){
                 if ($objPais->alta($pais)){
